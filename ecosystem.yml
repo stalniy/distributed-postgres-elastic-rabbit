@@ -1,0 +1,12 @@
+apps:
+  - script: ./src/index.js
+    name: gateway
+    watch: true
+    # instances: 4
+    # exec_mode: cluster
+  - script: ./src/commands/material.create.js
+    name: command.material.create
+    watch: true
+  - script: ./src/listeners/material.created.js
+    name: event.material.created
+    watch: true

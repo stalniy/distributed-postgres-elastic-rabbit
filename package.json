@@ -7,7 +7,7 @@
     "migrate": "knex migrate:latest",
     "migrate:undo": "knex migrate:rollback",
     "prestart": "npm run migrate",
-    "start": "nodemon src/index.js"
+    "start": "pm2 start ecosystem.yml"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "pm2": "^3.5.1"
   }
 }
